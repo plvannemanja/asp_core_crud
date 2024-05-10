@@ -51,7 +51,7 @@ namespace InitProject.Controllers
                 Quantity = productDTO.Quantity
             };
 
-            await _productRepository.Add(product);
+            product = await _productRepository.Add(product);
 
             return CreatedAtAction(nameof(PostProduct), new { productId = product.ProductId }, product);
         }
@@ -87,7 +87,7 @@ namespace InitProject.Controllers
 
             _productRepository.Remove(id);
 
-            return StatusCode(StatusCodes.Status204NoContent);
+            return NoContent();
         }
 
     }

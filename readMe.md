@@ -27,5 +27,21 @@ I have implemented all features in 2 hours but I spent lots of time for visual s
 Installing visual studio, asp .net, and MSSQL Server took 8 hours.
 I have not completed unit test and e2e test so I will integrate test code after submitting project.
 
-Thanks for your attantion.
-Plvan Nemanja
+Thanks for your attention.
+
+## Unit Test
+	* GetProducts_Should_Be_List: get product list
+	* GetProduct_Should_Be_Object: get prodct by id
+	* GetProduct_Should_Not_Found: get product returns not found
+	* PostProduct_Should_Be_Created: create product return object
+	* PutProduct_Should_Be_Object: update product return object
+	* PutProduct_Should_Be_Not_Found: update product return not found
+	* DeleteProduct_Should_Be_204: delete product return no content
+
+## test
+```visual studio
+# Test application
+```
+
+```visual studio code
+# dotnet test
