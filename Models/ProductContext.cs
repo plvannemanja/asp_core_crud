@@ -17,9 +17,5 @@ public class ProductContext : DbContext
         modelBuilder.Entity<Product>()
             .Property(product => product.ProductId)
             .ValueGeneratedOnAdd();
-
-        //modelBuilder.Entity<Product>()
-        //    .Property(product => product.CreatedDate)
-        //    .HasDefaultValueSql("GETDATE()");
     }
 }

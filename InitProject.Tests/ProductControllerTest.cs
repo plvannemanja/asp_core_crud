@@ -122,7 +122,7 @@ namespace InitProject.Tests
         {
             var id = 1;
             UpdateProductDTO productDTO = new UpdateProductDTO { Name = "Name2", Description = "Description2", Price = 2, Quantity = 3 };
-            Product nullItem = null;
+            Product? nullItem = null;
             var prevProduct = new Product { ProductId = 1, Name = "Name1", Description = "Description1", Price = 1, Quantity = 2 };
             var expectedProduct = new Product { ProductId = 1, Name = "Name2", Description = "Description2", Price = 2, Quantity = 3 };
             //Arrange
@@ -138,7 +138,7 @@ namespace InitProject.Tests
         }
 
         [Fact]
-        public async Task DeleteProduct_Should_Be_204()
+        public async Task DeleteProduct_Should_Be_No_Content()
         {
             var id = 1;
             UpdateProductDTO productDTO = new UpdateProductDTO { Name = "Name2", Description = "Description2", Price = 2, Quantity = 3 };

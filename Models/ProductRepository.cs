@@ -29,7 +29,7 @@ namespace InitProject.Models
 
             // Query your data source and apply pagination
             var query = await (_context.Products
-                                .OrderByDescending(m => m.ProductId) // Assuming you want to order by CreatedDate
+                                .OrderByDescending(m => m.ProductId) // Assuming you want to order by ProductId
                                 .Skip(skipCount)
                                 .Take(perPage)
                                 .ToListAsync());
@@ -44,7 +44,7 @@ namespace InitProject.Models
             return product;
         }
 
-        public async Task<Product> Find(int productId) {
+        public async Task<Product?> Find(int productId) {
             return await _context.Products.FindAsync(productId);
         }
 

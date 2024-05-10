@@ -65,7 +65,7 @@ namespace InitProject.Controllers
                 return NotFound();
             }
 
-            product.Name = productDTO.Name;
+            product.Name = productDTO.Name ?? product.Name;
             product.Description = productDTO.Description;
             product.Price = productDTO.Price;
             product.Quantity = productDTO.Quantity;

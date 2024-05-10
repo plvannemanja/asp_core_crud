@@ -23,7 +23,6 @@ namespace InitProject.Models
         [Required]
         public int Quantity { get; set; }
 
-        //[Required]
         public DateTime CreatedDate { get; set; }
 
         public DateTime? ModifiedDate { get; set; }
